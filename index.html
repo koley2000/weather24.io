@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather24</title>
+    <link rel="stylesheet" href="public/style.css">
+    <script src="public/main.js"></script>
+</head>
+
+<body>
+    <main class="main-container">
+        <div class="search-box">
+            <input type="search" id="search" placeholder="Enter City Name" onkeydown="if (event.keyCode == 13)
+            document.getElementById('submit').click()">
+            <button id="submit" onclick="getlocInput()"><img src="public/Search_Icon.svg.png" alt="" id="search_img" width="35px"></i></button>
+        </div>
+        <div class="location-time">
+            <h1 id="location">Kolkata, IND</h1>
+            <p id="current-day-time">Sunday 7 August 11:00</p>
+        </div>
+
+        <div class="current-weather">
+            <div class="current-weather-details">
+                <div class="current-temp-content">
+                    <div class="current-temp-img-box">
+                        <img src="public/sunny.svg" alt="" id="current-temp-img">
+                    </div>
+                    <div class="temp-details">
+                        <p id="current-temp-value">21&deg;</p>
+                        <p id="current-temp-summary">Sunny</p>
+                    </div>
+                </div>
+            </div>
+            <div class="current-weather-content">
+                <p id="feels-like-temp">Feels like: 27&deg;</p>
+                <p id="current-wind">Wind: 7mph</p>
+                <p id="current-humidity">Humidity: 5%</p>
+            </div>
+        </div>
+
+
+        <div class="hourly-weather">
+            <h3>Today's Weather</h3>
+            <div id="hourly-weather-container">
+                <!-- <div class="hourly-weather-item">
+                    <p class="hourly-item-time">3:00 am</p>
+                    <img src="mostly-sunny.svg" alt="Mostly sunny">
+                    <p id="hourly-item-temp">22&deg;</p>
+                </div> -->
+            </div>
+        </div>
+
+
+        <div class="weekly-weather">
+            <h3>Next 4 Days</h3>
+            <div id="weekly-weather-container">
+                <!-- <div class="weekly-weather-item">
+                    <div class="weekly-day-time">
+                        Mon
+                    </div>
+                    <div class="weekly-img">
+                        <img src="sunny.svg" alt="">
+                    </div>
+                    <p id="weekly-low-high-temp">21&deg;/27&deg;</p>
+                    <p id="weekly-humidity">Humidity: 5%</p>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 2rem;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-box {
+    margin: 3rem 20rem;
+    display: flex;
+}
+
+#search {
+    width: 90%;
+    padding: 13px 15px;
+    font-size: 1.1em;
+    border: 1px solid black;
+}
+
+button#submit {
+    font-size: 11px;
+    border: 1px solid black;
+    border-left: none;
+}
+
+
+/*current weather*/
+
+.current-weather {
+    display: flex;
+    margin: 0rem 6rem 2rem 8rem;
+}
+
+.location-time {
+    margin: 1rem 8rem;
+    padding: 0 1rem;
+}
+
+h1#location {
+    font-size: 3em;
+    margin: 0;
+}
+
+p#current-day-time {
+    margin: 3px 0;
+}
+
+#current-temp-img {
+    width: 14em;
+}
+
+.current-temp-content {
+    padding-top: 1rem;
+    display: flex;
+}
+
+#current-temp-value {
+    font-size: 5em;
+    margin: 3rem 3rem;
+}
+
+.current-temp-img-box {
+    padding: 2rem 1rem;
+}
+
+#current-temp-summary {
+    margin-top: -4rem;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+.current-weather-content {
+    border-left: 2px solid;
+    margin-left: 12rem;
+    padding: 3rem 1rem 3rem 8rem;
+    font-size: 1.5em;
+}
+
+
+/*hourly weather*/
+
+.hourly-weather {
+    margin: 0 5rem;
+}
+
+#hourly-weather-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    overflow: auto;
+}
+
+.hourly-weather-item {
+    border: 2px solid;
+    padding: 1.25rem 1.25rem;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.hourly-item-time,
+#hourly-item-temp {
+    margin: 0.25rem 0;
+    font-size: 1.1em;
+}
+
+
+/*weekly weather*/
+
+.weekly-weather {
+    margin-top: 3rem;
+    margin-left: 5rem;
+}
+
+#weekly-weather-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.75rem;
+    overflow: auto;
+}
+
+.weekly-weather-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0rem;
+    border: 2px solid;
+    align-items: center;
+    font-size: 1.1em;
+    border-radius: 25px;
+    margin-right: 1rem;
+}
+
+.weekly-day-time,
+.weekly-img,
+#weekly-low-high-temp,
+#weekly-humidity {
+    margin: 0 1rem;
+}
+
+
+/*for samrtphones*/
+
+@media screen and (max-width:450px) {
+    body {
+        margin: 2rem 1rem;
+    }
+    .search-box {
+        margin: 1rem 0;
+        align-items: center;
+        display: flex;
+    }
+    #search {
+        width: 100%;
+        padding: 6px 6px;
+    }
+    #search_img {
+        max-width: 29px;
+    }
+    .current-weather {
+        display: flex;
+        margin: 0;
+    }
+    .location-time {
+        margin: 0.5rem 0;
+    }
+    .current-temp-content {
+        padding-left: 0;
+    }
+    .current-weather-content {
+        display: none;
+    }
+    .current-temp-img-box {
+        padding: 1rem 0;
+    }
+    #current-temp-img {
+        width: 9em;
+    }
+    .temp-details {
+        margin: 1rem 0 0 0.5rem;
+    }
+    h1#location {
+        font-size: 2.2em;
+        margin: 0;
+    }
+    #current-temp-summary {
+        margin-top: -1.5rem;
+    }
+    #current-temp-value {
+        font-size: 4em;
+        margin: 1rem;
+    }
+    .hourly-weather-container {
+        margin-top: 0rem;
+    }
+    .hourly-weather {
+        margin: 0;
+    }
+    .weekly-weather {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+    #weekly-weather-container {
+        margin-top: 0.75rem;
+    }
+    .weekly-weather-item {
+        padding: 0.5rem 1rem;
+        font-size: 1em;
+    }
+    .weekly-img,
+    #weekly-low-high-temp,
+    #weekly-humidity {
+        margin: 0;
+    }
+}
+
+
+/*for tablets*/
+
+@media screen and (min-width: 450px) and (max-width: 850px) {
+    .search-box {
+        margin: 2rem 2rem;
+    }
+    .location-time {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    .current-weather {
+        margin: 0;
+    }
+    .current-weather-content {
+        margin-left: 7rem;
+        padding: 3rem 0rem 2rem 3rem;
+        font-size: 1.25em;
+    }
+    .current-temp-img-box {
+        padding: 2rem 0rem;
+    }
+    #current-temp-img {
+        width: 10em;
+    }
+    #current-temp-value {
+        font-size: 3em;
+        margin: 4rem 1rem;
+    }
+    .hourly-weather {
+        margin: 0;
+    }
+    .weekly-weather {
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+    .weekly-weather-item {
+        margin-left: 0;
+        width: 100%;
+    }
+}
