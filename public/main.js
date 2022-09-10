@@ -58,7 +58,7 @@ function currentweather() {
             document.getElementById("current-wind").innerHTML = "Wind: " + CurrentData.wind.speed + "m/s";
             document.getElementById("current-humidity").innerHTML = "Humidity: " + CurrentData.main.humidity + "%";
             var currentimg = CurrentData.weather[0].icon;
-            document.getElementById("current-temp-img").setAttribute('src', `http://openweathermap.org/img/wn/${currentimg}@2x.png`);
+            document.getElementById("current-temp-img").setAttribute('src', `https://openweathermap.org/img/wn/${currentimg}@2x.png`);
         })
         .catch(error => {
             alert("Unable to Display Current Weather");
@@ -69,7 +69,7 @@ function currentweather() {
 
 //<--------------------HOURLY AND WEEKLY WEATHER-------------------->
 function futweather() {
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=64de1703faed7185c168b523fdea7482&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=64de1703faed7185c168b523fdea7482&units=metric`)
         .then(response => response.json())
         .then(futData => {
             let containerRef = document.querySelector("#hourly-weather-container")
@@ -81,7 +81,7 @@ function futweather() {
                 let hourlyimg = futData.list[i].weather[0].icon;
                 allBox += `<div class="hourly-weather-item">
                             <p class="hourly-item-time">${futData.list[i].dt_txt.slice(10, 16)}</p>
-                            <img src="http://openweathermap.org/img/wn/${hourlyimg}@2x.png" alt="Mostly sunny">
+                            <img src="https://openweathermap.org/img/wn/${hourlyimg}@2x.png" alt="Mostly sunny">
                             <p id="hourly-item-temp">${futData.list[i].main.temp} &deg C </p>
                             </div>
                             `;
@@ -100,7 +100,7 @@ function futweather() {
                     ${weekdays[CheckDay(weekdayNum++)]}   
                 </div>
                 <div class="weekly-img">
-                    <img src="http://openweathermap.org/img/wn/${weeklyimg}@2x.png" alt="">
+                    <img src="https://openweathermap.org/img/wn/${weeklyimg}@2x.png" alt="">
                 </div>
                 <p id="weekly-low-high-temp">${futData.list[i].main.temp_max}&degC / ${futData.list[i].main.temp_min}&degC</p>
                 <p id="weekly-humidity">Humidity: ${futData.list[i].main.humidity}%</p>
