@@ -26,7 +26,7 @@ function getlocInput() {
 }
 
 function locData(loc) {
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${loc}&appid=64de1703faed7185c168b523fdea7482`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${loc}&appid=64de1703faed7185c168b523fdea7482`)
         .then(response => response.json())
         .then(Data => {
             document.getElementById("location").innerHTML = Data[0].name + " " + Data[0].country;
